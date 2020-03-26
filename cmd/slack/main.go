@@ -3,11 +3,11 @@ package main
 import (
 	"os"
 
-	"github.com/catoaune/multichannel/targetsystems/slack"
+	"github.com/catoaune/multichannel/channel/slack"
 )
 
 func main() {
-	channel := os.Getenv("slack_url")
-	slackConfig := slack.NewConfig(channel)
+	slackChannel := os.Getenv("slack_url")
+	slackConfig := slack.NewConfig(slackChannel)
 	slackConfig.SendNotification("Hei på deg!")
 }

@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/catoaune/multichannel/targetsystems/sms/twilio"
+	"github.com/catoaune/multichannel/channel/sms/twilio"
 )
 
 func main() {

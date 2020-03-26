@@ -4,7 +4,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/catoaune/multichannel/targetsystems/sms/gatewayapi"
+	"github.com/catoaune/multichannel/channel/sms/gatewayapi"
 )
 
 func main() {
