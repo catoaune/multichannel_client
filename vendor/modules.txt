@@ -1,0 +1,7 @@
+# github.com/catoaune/multichannel v0.0.0-20200527175014-c9e2d2dd2b98
+github.com/catoaune/multichannel/channel/slack
+github.com/catoaune/multichannel/channel/sms/gatewayapi
+github.com/catoaune/multichannel/channel/sms/linkmobility
+github.com/catoaune/multichannel/channel/sms/twilio
+# github.com/mrjones/oauth v0.0.0-20190623134757-126b35219450
+github.com/mrjones/oauth
