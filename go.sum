@@ -1,7 +1,5 @@
-github.com/catoaune/multichannel v0.0.0-20200325201759-762ad109c5ae h1:G6tPP0NHM7799u1Iuy/9Z2B9QZ8gTMDO8zJzzkhe9Xk=
-github.com/catoaune/multichannel v0.0.0-20200325201759-762ad109c5ae/go.mod h1:Hvp7r1tZZIua5kv65dmPTrrR7vfNs+10wRtTg5H58+w=
-github.com/catoaune/multichannel v0.0.0-20200527175014-c9e2d2dd2b98 h1:a0EoM/kO7VELI75G/zf0ShmUPDa7FVjEyjFciDMjYY0=
-github.com/catoaune/multichannel v0.0.0-20200527175014-c9e2d2dd2b98/go.mod h1:Hvp7r1tZZIua5kv65dmPTrrR7vfNs+10wRtTg5H58+w=
+github.com/catoaune/multichannel v0.0.0-20200528115147-dde31bcdbaa8 h1:nFQJqe1stRdVqgcVIddBVOIhtQ3zxgTOvxp/y3m27N0=
+github.com/catoaune/multichannel v0.0.0-20200528115147-dde31bcdbaa8/go.mod h1:Hvp7r1tZZIua5kv65dmPTrrR7vfNs+10wRtTg5H58+w=
 github.com/golang/protobuf v1.3.1/go.mod h1:6lQm79b+lXiMfvg/cZm0SGofjICqVBUtrP5yJMmIC1U=
 github.com/mrjones/oauth v0.0.0-20190623134757-126b35219450 h1:j2kD3MT1z4PXCiUllUJF9mWUESr9TWKS7iEKsQ/IipM=
 github.com/mrjones/oauth v0.0.0-20190623134757-126b35219450/go.mod h1:skjdDftzkFALcuGzYSklqYd8gvat6F1gZJ4YPVbkZpM=
