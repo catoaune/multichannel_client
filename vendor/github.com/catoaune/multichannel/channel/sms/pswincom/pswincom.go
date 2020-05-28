@@ -3,7 +3,9 @@ package pswincom
 import (
 	"bytes"
 	"errors"
+	"log"
 	"net/http"
+	"net/url"
 )
 
 //Config for PSWinCom sms service
@@ -25,11 +27,11 @@ func NewConfig(username string, password string, from string) Config {
 //SendNotification sends msg to recipient as SMS
 func (c Config) SendNotification(msg string, recipient string) error {
 	requestData := "USER=" + c.username
-	requestData += "PW=" + c.password
-	requestData += "RCV=" + recipient
-	requestData += "SND=" + c.from
-	requestData += "TXT=" + msg
-
+	requestData += "&PW=" + c.password
+	requestData += "&RCV=" + recipient
+	requestData += "&SND=" + c.from
+	requestData += "&TXT=" + url.QueryEscape(msg)
+	log.Println("Req: " + requestData)
 	client := &http.Client{}
 	b := bytes.NewBuffer([]byte(requestData))
 	request, _ := http.NewRequest("POST", c.URL, b)

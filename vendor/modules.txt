@@ -1,4 +1,4 @@
-# github.com/catoaune/multichannel v0.0.0-20200528123213-7a0e49e6f126
+# github.com/catoaune/multichannel v0.0.0-20200528135820-992151538b16
 github.com/catoaune/multichannel/channel/slack
 github.com/catoaune/multichannel/channel/sms/gatewayapi
 github.com/catoaune/multichannel/channel/sms/linkmobility
