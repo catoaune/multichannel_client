@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"github.com/catoaune/multichannel/channel/sms/pswincom"
 )
@@ -12,5 +13,8 @@ func main() {
 	msg := os.Args[1]
 	recipient := os.Args[2]
 	pswincomConfig := pswincom.NewConfig(username, password, sender)
-	pswincomConfig.SendNotification(msg, recipient)
+	err := pswincomConfig.SendNotification(msg, recipient)
+	if err != nil {
+		fmt.Println("Error: {err}")
+	}
 }
