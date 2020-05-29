@@ -3,7 +3,10 @@ package pswincom
 import (
 	"bytes"
 	"errors"
+	"log"
 	"net/http"
+	"net/url"
+	"strings"
 )
 
 //Config for PSWinCom sms service
@@ -25,21 +28,26 @@ func NewConfig(username string, password string, from string) Config {
 //SendNotification sends msg to recipient as SMS
 func (c Config) SendNotification(msg string, recipient string) error {
 	requestData := "USER=" + c.username
-	requestData += "PW=" + c.password
-	requestData += "RCV=" + recipient
-	requestData += "SND=" + c.from
-	requestData += "TXT=" + msg
-
+	requestData += "&PW=" + c.password
+	requestData += "&RCV=" + formatNumber(recipient)
+	requestData += "&SND=" + c.from
+	requestData += "&TXT=" + url.QueryEscape(msg)
+	log.Println("Req: " + requestData)
 	client := &http.Client{}
 	b := bytes.NewBuffer([]byte(requestData))
 	request, _ := http.NewRequest("POST", c.URL, b)
 
 	request.Header.Add("Content-Length", string(len(requestData)))
-	request.Header.Add("Content-Type", "application/x-www-form-urlencoded")
+	request.Header.Add("Content-Type", "application/x-www-form-urlencoded; charset=utf-8")
 
 	resp, _ := client.Do(request)
 	if resp.StatusCode < 200 && resp.StatusCode >= 300 {
 		return errors.New(string(resp.StatusCode) + " " + resp.Status)
 	}
 	return nil
+}
+
+func formatNumber(phoneNumber string) string {
+	formatted := strings.Replace(phoneNumber, "+", "", -1)
+	return strings.Replace(formatted, " ", "", -1)
 }
